@@ -1,0 +1,101 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+h1{
+    color: #ffffff;
+    text-align: center;
+    animation: fluido 20s ease-in-out infinite;
+    background: linear-gradient(-45deg, #f4f805,#ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 300%;
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% }
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #1e1e20;
+}
+.mySwiper{
+    width: 90%;
+    margin: 10px auto;
+}
+.swiper-slide:nth-of-type(odd) .slider-box{
+    flex-direction: column-reverse;
+}
+.swiper-pagination{
+    position: static !important;
+    margin-top: 10px;
+}
+.swiper-pagination-bullet-active{
+    background-color: #ffffff !important;
+}
+/* SLIDER */
+.slider-box{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #3f3f3f;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    user-select: none;
+}
+.slider-img{
+    width: 100%;
+    height: 600px;
+    filter: grayscale(0.8);
+    opacity: 0.8;
+    transition: all ease 0.4s;
+}
+.slider-text{
+    text-align: left;
+    transition: all ease 0.4s;
+    text-align: center
+}
+.slider-box:hover .slider-img{
+    filter: grayscale(0);
+    opacity: 1;
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.04, 1.04);
+}
+.slider-box:hover .slider-text{
+    box-shadow: 1px 2px 20px rgba(0, 0, 0, 0.8);
+    transform: scale(1.04, 1.04);
+}
+.slider-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.slider-text strong{
+    color: #ffffff;
+    font-size: 1.2rem;
+    object-fit: cover;
+    object-position: center;
+    transition: all ease 0.4s;
+}
+.slider-text:hover {
+    background-color: #3f3f3f !important;
+}
+.slider-text strong{
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+@media(max-width:600px){
+    .slider-img{
+        height: 500px;
+    }
+}
